@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Ansible &mdash; shrapk2.github.io</title>
+  <title>Sample ansible.cfg &mdash; shrapk2.github.io</title>
   
 
   
@@ -36,8 +36,8 @@
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Ansible Notes" href="ansible.html" />
-    <link rel="prev" title="ITPro" href="../index.html" /> 
+    <link rel="next" title="Sphinx" href="../sphinx/index.html" />
+    <link rel="prev" title="Ansible Notes" href="ansible.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,9 +95,9 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">ITPro</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Ansible</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Ansible</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ansible.html">Ansible Notes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ansible_cfg.html">Sample ansible.cfg</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sample ansible.cfg</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../sphinx/index.html">Sphinx</a><ul>
@@ -159,13 +159,15 @@
         
           <li><a href="../index.html">ITPro</a> &raquo;</li>
         
-      <li>Ansible</li>
+          <li><a href="index.html">Ansible</a> &raquo;</li>
+        
+      <li>Sample ansible.cfg</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/ITPro/ansible/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/ITPro/ansible/ansible_cfg.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,14 +180,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ansible">
-<h1>Ansible<a class="headerlink" href="#ansible" title="Permalink to this headline">¶</a></h1>
-<p>Ansible-related musings.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ansible.html">Ansible Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ansible_cfg.html">Sample ansible.cfg</a></li>
-</ul>
+  <div class="section" id="sample-ansible-cfg">
+<h1>Sample ansible.cfg<a class="headerlink" href="#sample-ansible-cfg" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>defaults<span class="o">]</span>
+<span class="nv">host_key_checking</span> <span class="o">=</span> False
+<span class="nv">deprecation_warnings</span> <span class="o">=</span> False
+<span class="nv">retry_files_enabled</span> <span class="o">=</span> False
+<span class="c1"># strategy_plugins = /etc/ansible/plugins/mitogen-0.2.9/ansible_mitogen/plugins/strategy</span>
+<span class="c1"># strategy = mitogen_linear</span>
+<span class="nv">callback_whitelist</span> <span class="o">=</span> profile_tasks <span class="c1">#Provides timestamps (See Performance Tuning Note)</span>
+
+<span class="o">[</span>inventory<span class="o">]</span>
+<span class="o">[</span>privilege_escalation<span class="o">]</span>
+<span class="o">[</span>paramiko_connection<span class="o">]</span>
+<span class="o">[</span>ssh_connection<span class="o">]</span>
+<span class="o">[</span>persistent_connection<span class="o">]</span>
+<span class="o">[</span>accelerate<span class="o">]</span>
+<span class="o">[</span>selinux<span class="o">]</span>
+<span class="o">[</span>colors<span class="o">]</span>
+<span class="o">[</span>diff<span class="o">]</span>
+</pre></div>
 </div>
 </div>
 
@@ -197,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ansible.html" class="btn btn-neutral float-right" title="Ansible Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../sphinx/index.html" class="btn btn-neutral float-right" title="Sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral float-left" title="ITPro" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ansible.html" class="btn btn-neutral float-left" title="Ansible Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
