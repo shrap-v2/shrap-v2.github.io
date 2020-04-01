@@ -63,6 +63,7 @@ html_static_path = ['_static']
 html_title = 'shrapk2.github.io'
 
 html_short_title = 'Home'
+html_favicon = 'shrapk2.png'
 
 html_theme_options = {
     "collapse_navigation": False
